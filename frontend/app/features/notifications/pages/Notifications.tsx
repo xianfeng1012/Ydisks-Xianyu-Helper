@@ -36,7 +36,7 @@ const Notifications: React.FC<NotificationsProps> = ({ isAdmin = false }) => {
 
       <NotificationChannelModal showModal={notificationState.showModal} editing={notificationState.editing} form={notificationState.form} setForm={notificationState.setForm} smtp={notificationState.smtp} showChannelSmtpPassword={notificationState.showChannelSmtpPassword} setShowChannelSmtpPassword={notificationState.setShowChannelSmtpPassword} saving={notificationState.saving} onClose={notificationState.closeModal} onSave={notificationState.handleSave} />
 
-      {notificationState.toast && <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-[10000] px-5 py-3 rounded-xl shadow-lg font-bold text-sm flex items-center gap-2 animate-fade-in text-white ${notificationState.toast.type === 'success' ? 'bg-success-500' : 'bg-danger-500'}`}>{notificationState.toast.type === 'success' ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}{notificationState.toast.text}</div>}
+      {notificationState.toast && <div className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-[10001] px-5 py-3 rounded-xl shadow-lg font-bold text-sm flex items-center gap-2 animate-fade-in text-white ${notificationState.toast.type === 'success' ? 'bg-success-500' : 'bg-danger-500'}`}>{notificationState.toast.type === 'success' ? <Check className="w-4 h-4" /> : <X className="w-4 h-4" />}{notificationState.toast.text}</div>}
     </div>
   );
 };
